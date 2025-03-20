@@ -2,14 +2,16 @@ package test_3_19;
 
 public class Book {
     private String id;
-    private String bookName;
+    private String name;
+    private String writer;
 
     public Book() {
     }
 
-    public Book(String id, String bookName) {
+    public Book(String id, String name, String writer) {
         this.id = id;
-        this.bookName = bookName;
+        this.name = name;
+        this.writer = writer;
     }
 
     public String getId() {
@@ -20,11 +22,19 @@ public class Book {
         this.id = id;
     }
 
-    public String getBookName() {
-        return bookName;
+    public String getName() {
+        return name;
     }
 
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getWriter() {
+        return writer;
+    }
+
+    public void setWriter(String writer) {
+        this.writer = writer;
     }
 }
