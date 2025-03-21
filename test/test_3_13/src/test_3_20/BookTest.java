@@ -1,12 +1,12 @@
-package test_3_19;
+package test_3_20;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BookTest {
-    public static void main(String[] args) {
+    public static void startBookSystem() {
         //创建一个集合存储图书对象
-        ArrayList<Book> list=new ArrayList<>();
+        ArrayList<test_3_20.Book> list=new ArrayList<>();
         while (true) {
             menu();
             System.out.println("请输入你的选项:");
@@ -47,8 +47,8 @@ public class BookTest {
     }
 
     //添加图书
-    public static void add(ArrayList<Book> list) {
-        Book book=new Book();
+    public static void add(ArrayList<test_3_20.Book> list) {
+        test_3_20.Book book=new Book();
         Scanner sc=new Scanner(System.in);
         System.out.println("请输入书的编号:");
         String id = sc.next();
@@ -70,20 +70,20 @@ public class BookTest {
     }
 
     //查询全部
-    public static void checkAll(ArrayList<Book> list) {
+    public static void checkAll(ArrayList<test_3_20.Book> list) {
         for (int i = 0; i < list.size(); i++) {
-            Book book = list.get(i);
+            test_3_20.Book book = list.get(i);
             System.out.println(book.getId()+","+book.getName()+","+book.getWriter());
         }
     }
 
     //查询单本
-    public static void checkSingle(ArrayList<Book> list) {
+    public static void checkSingle(ArrayList<test_3_20.Book> list) {
             System.out.println("请输入你要查询的图书的id:");
             Scanner sc=new Scanner(System.in);
             String id = sc.next();
             int index = getIndex(list, id);
-            Book book = list.get(index);
+            test_3_20.Book book = list.get(index);
             if(book.getId().equals(id)){
                 System.out.println(book.getId()+","+book.getName()+","+book.getWriter());
                 return;
@@ -92,7 +92,7 @@ public class BookTest {
     }
 
     //删除图书
-    public static void remove(ArrayList<Book> list) {
+    public static void remove(ArrayList<test_3_20.Book> list) {
         System.out.println("请输入你要删除的图书的id:");
         Scanner sc=new Scanner(System.in);
         String id = sc.next();
@@ -107,13 +107,13 @@ public class BookTest {
     }
 
     //修改
-    public static void set(ArrayList<Book> list) {
+    public static void set(ArrayList<test_3_20.Book> list) {
         System.out.println("请输入你要修改的图书的id:");
         Scanner sc=new Scanner(System.in);
         String id = sc.next();
         int index = getIndex(list, id);
         if(isExit(list,id)){
-            Book book=list.get(index);//要修改图书的对象
+            test_3_20.Book book=list.get(index);//要修改图书的对象
             bookMenu();
             System.out.println("请输入你的选项:");
             int choice = sc.nextInt();
@@ -146,7 +146,7 @@ public class BookTest {
     }
 
     //编号是否存在(多个地方使用)
-    public static boolean isExit(ArrayList<Book> list,String id){
+    public static boolean isExit(ArrayList<test_3_20.Book> list,String id){
 
 //        for (int i = 0; i < list.size(); i++) {
 //            Book book = list.get(i);
@@ -159,9 +159,9 @@ public class BookTest {
     }
 
     //返回存在的编号的索引
-    public static int getIndex(ArrayList<Book> list,String id){
+    public static int getIndex(ArrayList<test_3_20.Book> list,String id){
         for (int i = 0; i < list.size(); i++) {
-            Book book = list.get(i);
+            test_3_20.Book book = list.get(i);
             if(book.getId().equals(id)){
                 return i;
             }
