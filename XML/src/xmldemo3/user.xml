@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<users>
+
+    <user id="1">
+        <username>zhangsan</username>
+        <password>123</password>
+        <phoneId>11111223909</phoneId>
+        <admin>true</admin>
+    </user>
+
+    <user id="2">
+        <a>
+            <username>lisi</username>
+            <password>1314</password>
+            <phoneId>11111223909</phoneId>
+            <admin>false</admin>
+        </a>
+    </user>
+
+    <user id="3">
+        <username>iu</username>
+        <password>10024</password>
+        <phoneId>11111223909</phoneId>
+        <admin>false</admin>
+    </user>
+
+    <username>liyi</username>
+
+</users>
